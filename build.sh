@@ -50,7 +50,10 @@ echo '-----'
 cd ..
 
 echo 'Creating archive...'
+cd build
+zip -9 -q -r layer.zip lib nodejs
+cd ..
 mkdir -p dist
-zip -q -r dist/layer.zip build/lib build/nodejs
+mv build/layer.zip dist
 
 echo 'Done!'
